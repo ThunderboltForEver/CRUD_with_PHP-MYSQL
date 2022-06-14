@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap');
+* , 
+::before ,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: rgba(12, 128, 163, 0.800);
+}
+body {
+    font-family: 'Baloo 2', cursive;
+}
+a {
+    cursor: pointer;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../imgs/backgroundImage.jpg");
+    background-size: cover;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.800);
+}
+header .input {
+    position: absolute;
+    width: 800px;
+    height: 300px;
+    display: flex;
+}
+header .input .text {
+    width: 40%;
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    user-select: none;
+    
+}
+header .input .text span {
+    position: relative;
+    font-size: 4rem;
+    color: yellow;
+    font-weight: 500;
+}
+header .input .text span::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 9px;
+    left: -1px;
+    border: 3px solid #fff;
+    border-color: transparent #fff ;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+header .input form {
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.800);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+header .input form .admin-logo {
+    margin-top: 10px;
+    text-align: center;
+    user-select: none;
+}
+header .input form .admin-logo img {
+    width: 100px;
+    height: 100px;
+} 
+header .input form .data-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+header .input form .data-inputs input {
+    padding: 6px;
+    background-color: transparent;
+    border-color: transparent transparent var(--main-color) transparent;
+    outline: none;
+    caret-color: var(--main-color) ;  
+    
+}
+header .input form .data-inputs input.inputPass + .eyeShow {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+header .input form .data-inputs input.inputPass + .eyeShow + span.divide {
+    position: absolute;
+    top:42px;
+    right: 6px;
+    font-size: 1.3rem;
+    transform: rotate(22deg);
+    -webkit-transform: rotate(22deg);
+    -moz-transform: rotate(22deg);
+    -ms-transform: rotate(22deg);
+    -o-transform: rotate(22deg);
+    display: none;
+    cursor: pointer;
+    
+}
+header .input form .rightArrow {
+    color: var(--main-color);
+    font-size: 1.5rem;
+}

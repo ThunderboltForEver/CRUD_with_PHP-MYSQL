@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap');
+* ,
+::before ,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Baloo 2', cursive;
+    background-color: #eee;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+header nav{
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 10px 0;
+    background-color: rgba(51, 51, 51, 0.800);
+}
+header nav .logo {
+    color: rgb(42, 169, 207);
+    width: 150px;
+    font-weight: 500;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+header nav .logo span {
+    position: relative;
+    top: 5px;
+    font-size: 3rem;
+    color: yellow;
+    font-weight: 500;
+}
+header nav .links ul {
+    display: flex;
+    flex: 1;
+    gap: 30px;
+}
+header nav .links ul a {
+    font-weight: 500;
+    color: #FFF;
+}
+header nav .links ul li {
+    padding: 14px;
+}
+header nav .links ul li:hover {
+    background-color: rgba(228, 250, 104, 0.6);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    color: black;
+}
+.landscape {
+    width: 100%;
+    height: calc(100vh - 72px);
+    background-image: url("../imgs/background.jpg");
+    background-size: cover;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.landscape::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 72px);
+    background-color: rgba(0, 0, 0, 0.100);
+}
+.landscape h1 {
+    font-size: 2.5rem;
+}
+.landscape h1 span {
+    color: rgb(42, 169, 207);
+}
+.landscape p {
+    color: yellow;
+    font-size: 1rem;
+}
