@@ -36,10 +36,20 @@ header::before {
     background-color: rgba(0, 0, 0, 0.800);
 }
 header .input {
-    position: absolute;
     width: 800px;
     height: 300px;
     display: flex;
+    position: relative;
+    z-index: 10000;
+    
+}
+@media ( max-width:767px ) {
+    header .input {
+        width: 95%;
+        height: fit-content;
+        flex-direction: column;
+        background-color: white;
+    }
 }
 header .input .text {
     width: 40%;
@@ -51,6 +61,11 @@ header .input .text {
     background-color: var(--main-color);
     user-select: none;
     
+}
+@media ( max-width:767px ) {
+    header .input .text{
+        width: 100%;
+    }
 }
 header .input .text span {
     position: relative;
@@ -80,6 +95,11 @@ header .input form {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+@media ( max-width:767px ) {
+    header .input form {
+        width: 100%;
+    }
 }
 header .input form .admin-logo {
     margin-top: 10px;

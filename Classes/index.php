@@ -11,6 +11,7 @@ require_once('../db.php');
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Classes</title>
   <link rel="stylesheet" href="../assests/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../Subjects/css/style.css">
 </head>
 
 <body>

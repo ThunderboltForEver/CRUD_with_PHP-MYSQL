@@ -11,26 +11,29 @@ require_once('../db.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search by Id or Name</title>
     <link rel="stylesheet" href="../assests/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/search.css">
 
 </head>
 
 <body>
     <div class="container mt-3">
         <form action="#" method="post">
-            <div class="form-group d-flex align-items-center">
+            <div class="form-group d-flex align-items-center form-container">
                 <label style="width:210px;font-weight:bold">Search by teacher number :</label>
                 <input type="number" class="form-control me-3" style="width: 250px;" name="teacherNumber">
                 <label style="width:210px;font-weight:bold">Search by teacher name :</label>
                 <input type="search" class="form-control me-3" style="width: 250px;" name="teacherName">
-                <input type="submit" value="search" class="btn btn-success btn-sm">&nbsp;
-                <a class="btn btn-secondary btn-sm" href="index.php">Back</a>
+                <div>
+                    <input type="submit" value="search" class="btn btn-success btn-sm">&nbsp;
+                    <a class="btn btn-secondary btn-sm" href="index.php">Back</a>
+                </div>
             </div>
         </form>
         <hr style="color:green">
         <table class="table mt-5">
             <thead class="text-center" style="background-color:#333;color:white">
-                <td>Teacher number</td>
-                <td>Teacher name</td>
+                <td>Number</td>
+                <td>Name</td>
                 <td>Birth date</td>
                 <td>Address</td>
             </thead>
@@ -63,7 +66,7 @@ require_once('../db.php');
                         if ($result2 = mysqli_query($GLOBALS['conn'], $sql2)) {
 
                             while ($rows2 = mysqli_fetch_assoc($result2)) {
-                                
+
                             ?>
                                 <tr class="text-center">
                                     <td><?php echo $rows2['teacher_number']; ?></td>

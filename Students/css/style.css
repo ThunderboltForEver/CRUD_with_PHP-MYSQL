@@ -1,0 +1,29 @@
+@media (max-width: 767px){
+    thead td {
+        padding-top:0px !important;
+        
+    }
+    tbody tr {
+        border-bottom: 1px solid #ddd;
+    }
+   tr td {
+    
+        padding-bottom: 10px !important;
+        padding-top: 10px !important;
+        border-bottom: none !important;
+    }
+
+    tbody tr td:last-of-type {
+        display: flex;
+    }
+    tbody tr td:nth-child(3) {
+        display: flex;
+    }
+    tr .btn-sm {
+        width: 50px;
+        font-size: 12px !important;
+        padding: 4px;
+    }
+    tbody tr td {
+        width: 110px !important;
+    } }

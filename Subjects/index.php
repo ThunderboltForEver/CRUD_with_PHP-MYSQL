@@ -10,6 +10,7 @@ require_once('../db.php');
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subjects</title>
   <link rel="stylesheet" href="../assests/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -18,8 +19,8 @@ require_once('../db.php');
     <a class="btn btn-primary mt-2 btn-sm" href="add.php">Add subject</a>&nbsp;<a class="btn btn-secondary  mt-2 btn-sm" href="../assests/pages/index.html">Back to Home</a>
     <table class="table mt-3">
       <thead class="text-center" style="background-color:#333;color:white">
-        <td>Subject number</td>
-        <td>Subject name</td>
+        <td>Number</td>
+        <td>Name</td>
         <td>Teacher name</td>
         <td>Operations</td>
       </thead>

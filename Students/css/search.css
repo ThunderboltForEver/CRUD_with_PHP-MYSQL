@@ -1,0 +1,23 @@
+@media (max-width: 1200px) {
+    .form-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .form-container label {
+        display: flex;
+        align-self: flex-start;
+    }
+    .form-container input {
+        display: flex;
+        align-self: flex-start;
+    }
+    .form-container div:last-child {
+        display: flex;
+        align-self: flex-start;
+        padding: 10px 0px;
+    }
+    thead {
+        font-size: 14px !important;
+    }
+}

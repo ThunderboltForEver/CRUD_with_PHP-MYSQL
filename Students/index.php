@@ -10,6 +10,7 @@ require_once('../db.php');
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Students</title>
   <link rel="stylesheet" href="../assests/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -18,12 +19,12 @@ require_once('../db.php');
     <a class="btn btn-primary mt-2 btn-sm" href="add.php">Add Student</a>&nbsp;<a href="search.php" class="btn btn-primary btn-sm mt-2" style="background-color: orange;">Search</a> &nbsp;<a class="btn btn-secondary  mt-2 btn-sm" href="../assests/pages/index.html">Back to Home</a>
     <table class="table mt-3">
       <thead class="text-center" style="background-color:#333;color:white">
-        <td>Student Number</td>
-        <td>Student Name</td>
+        <td>Number</td>
+        <td>Name</td>
         <td>Birth Date</td>
         <td>Address</td>
-        <td>Student Picture</td>
-        <td>Student Class</td>
+        <td>Picture</td>
+        <td>Class</td>
         <td>Operations</td>
       </thead>
       <tbody>

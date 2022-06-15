@@ -18,7 +18,7 @@ require_once('../db.php');
             <!--  -->
             <div>
                 <label> Search by:</label>
-                <select name="studentSelect" id="studentSelectId" class="studentSelectId pb-1 fw-bold">
+                <select name="studentSelect" id="studentSelectId" class="studentSelectId pb-1 fw-bold mb-2">
                     <option value="n" selected disabled>students</option>
                     <option value="a">All</option>
                     <?php
@@ -60,15 +60,15 @@ require_once('../db.php');
             </div>
             <!--  -->
             <div>
-                <a href="best_teacher.php" class="btn btn-primary btn-sm" style="background-color: crimson;">The Best Teacher</a>
+                <a href="best_teacher.php" class="btn btn-primary btn-sm" style="background-color: crimson;font-size:12px;">The Best Teacher</a>
             </div>
         </form>
         <table class="table mt-3">
             <thead class="text-center" style="background-color:#333;color:white">
-                <td>Mark Number</td>
-                <td>Mark</td>
-                <td>Student Name</td>
-                <td>Subject Name</td>
+                <td style="font-size: 12px;">Mark Number</td>
+                <td style="font-size: 12px;">Mark</td>
+                <td style="font-size: 12px;">Student Name</td>
+                <td style="font-size: 12px;">Subject Name</td>
             </thead>
             <tbody>
                 <?php

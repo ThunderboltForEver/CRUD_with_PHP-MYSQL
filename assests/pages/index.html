@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="css/Home.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <span>A</span>ra Academy
-            </div>
-            <div class="links">
+        <div class="logo">
+            <div><span>A</span>ra Academy</div>
+            <i class="fa-solid fa-bars bars" onclick="toggle()"></i>
+        </div>
+       
+        <nav>                
                 <ul>
                     <a href="../../Teachers/index.php"><li>Teachers</li></a>
                     <a href="../../Subjects/index.php"><li>Subjects</li></a>
@@ -21,13 +23,16 @@
                     <a href="../../Students/index.php"><li>Students</li></a>
                     <a href="../../Marks/index.php"><li>Marks</li></a>
                 </ul>
-            </div>
         </nav>
+        
     </header>
     <div class="landscape">
-        <h1>Welcome To <span>Ara</span> Academy</h1>
+        <div class="text">
+        <h1>Welcome To <span>A</span><span>ra</span> Academy</h1>
         <p>The way to Achieve your dreams</p>
-
+        </div>
     </div>
+    <script src="../js/all.min.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>

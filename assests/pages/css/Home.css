@@ -17,15 +17,29 @@ a {
     text-decoration: none;
     color: black;
 }
-header nav{
+header {
     height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding:0 10px 0;
-    background-color: rgba(51, 51, 51, 0.800);
+    background-color: #163a3e;
+    position: relative;
 }
-header nav .logo {
+@media (max-width:767px) {
+    header nav {
+        z-index: 1000;
+        height: fit-content;
+        background-color: rgba(51, 51, 51, 0.900);
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+    }
+}
+header .logo {
+    height: 72px;
     color: rgb(42, 169, 207);
     width: 150px;
     font-weight: 500;
@@ -33,26 +47,75 @@ header nav .logo {
     font-weight: 500;
     font-size: 1.3rem;
 }
-header nav .logo span {
-    position: relative;
-    top: 5px;
+@media (max-width:767px) {
+    header .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+header .logo > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo .bars {
+    color: yellow;
+    font-size: 1.8rem;
+    padding: 4px;
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+@media (max-width:767px) {
+    header .logo .bars {
+        display: inline;
+        user-select: none;
+    }
+}
+header .logo span {
     font-size: 3rem;
     color: yellow;
     font-weight: 500;
 }
-header nav .links ul {
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+}
+}
+header nav ul {
     display: flex;
     flex: 1;
     gap: 30px;
 }
-header nav .links ul a {
+@media (max-width:767px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+}
+header nav ul a {
     font-weight: 500;
     color: #FFF;
 }
-header nav .links ul li {
+@media (max-width: 767px) {
+    header nav ul a {
+        width: 100%;
+        border-bottom: 1px solid #eee ;
+        display: flex;
+        justify-content: center;
+    }
+    header nav ul a:hover {
+       background-color: rgba(228, 250, 104, 0.6);
+    }
+}
+header nav ul li {
     padding: 14px;
 }
-header nav .links ul li:hover {
+header nav ul li:hover {
     background-color: rgba(228, 250, 104, 0.6);
     border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -60,6 +123,11 @@ header nav .links ul li:hover {
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
     color: black;
+}
+@media (max-width:767px) {
+    header nav ul li:hover {
+        background: none;
+    }
 }
 .landscape {
     width: 100%;
@@ -72,22 +140,55 @@ header nav .links ul li:hover {
     align-items: center;
     flex-direction: column;
 }
-.landscape::before {
+.landscape .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* .landscape::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: calc(100vh - 72px);
-    background-color: rgba(0, 0, 0, 0.100);
+    background-color: rgba(0, 0, 0, 0.300);
 }
+@media (max-width: 767px) {
+    .landscape::before {
+        display: none;
+    }
+} */
 .landscape h1 {
     font-size: 2.5rem;
+    z-index: 200;
+}
+@media (max-width:767px) {
+    .landscape h1 {
+        font-size: 1.8rem;
+        color: black;
+        z-index: 300;
+    } 
 }
 .landscape h1 span {
+    color: crimson;
+}
+.landscape h1 span:first-child {
     color: rgb(42, 169, 207);
+    font-size: 3rem;
 }
 .landscape p {
-    color: yellow;
-    font-size: 1rem;
+    color: white;
+    font-size: 1.1rem;
+    z-index: 200;
+    letter-spacing: 1.6px;
+    box-shadow: 0.5px 0.5px 4px 0.2px yellow ;
+    background-color: rgba(51, 51, 51, 0.600);
+    padding: 4px;
+}
+@media (max-width: 767px) {
+    .landscape p {
+        font-size: 0.9rem;
+    }
 }

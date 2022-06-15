@@ -10,6 +10,7 @@ require_once('../db.php');
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teachers</title>
   <link rel="stylesheet" href="../assests/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/php-index.css">
 
 </head>
 
@@ -20,9 +21,9 @@ require_once('../db.php');
 
     <table class="table mt-3">
       <thead class="text-center" style="background-color:#333;color:white">
-        <td>Teacher number</td>
-        <td>Teacher name</td>
-        <td>Birth date</td>
+        <td>Number</td>
+        <td>Name</td>
+        <td>Birth Date</td>
         <td>Address</td>
         <td>Operations</td>
       </thead>

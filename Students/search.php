@@ -11,33 +11,35 @@ require_once('../db.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search by Date or Class</title>
     <link rel="stylesheet" href="../assests/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/search.css">
 
 </head>
 
 <body>
     <div class="container mt-3">
         <form action="#" method="post">
-            <div class="form-group d-flex align-items-center">
+            <div class="form-group d-flex align-items-center form-container">
                 <label style="width:250px;font-weight:bold"> Serach by date between</label>
                 <input type="date" class="form-control me-3" style="width: 250px;" name="FirstDate">
                 <label style="width:70px;font-weight:bold">And :</label>
                 <input type="date" class="form-control me-3" style="width: 250px;" name="SecondDate">
                 <label style="width:155px;font-weight:bold">Or Calss name :</label>
                 <input type="text" class="form-control me-3" style="width: 250px;" name="className">
-
-                <input type="submit" value="search" class="btn btn-success btn-sm">&nbsp;
-                <a class="btn btn-secondary btn-sm" href="index.php">Back</a>
+                <div class="d-flex">
+                    <input type="submit" value="search" class="btn btn-success btn-sm">&nbsp;
+                    <a class="btn btn-secondary btn-sm" href="index.php">Back</a>
+                </div>
             </div>
         </form>
         <hr style="color:green">
         <table class="table mt-3">
             <thead class="text-center" style="background-color:#333;color:white">
-                <td>Student Number</td>
-                <td>Student Name</td>
-                <td>Birth Date</td>
+                <td>Number</td>
+                <td>Name</td>
+                <td>Birth</td>
                 <td>Address</td>
-                <td>Student Picture</td>
-                <td>Student Class</td>
+                <td>Picture</td>
+                <td>Class</td>
             </thead>
             <tbody>
                 <?php
@@ -72,7 +74,7 @@ require_once('../db.php');
 
                         if ($result2 = mysqli_query($GLOBALS['conn'], $sql2)) {
                             while ($rows2 = mysqli_fetch_assoc($result2)) {
-                            
+
                             ?>
                                 <tr class="text-center">
                                     <td class="pt-3"><?php echo $rows2['student_number']; ?></td>
